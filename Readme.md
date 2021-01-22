@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Михаил Андреевич  Стариков](https://up.htmlacademy.ru/htmlcss/30/user/1669409).
-* Наставник: [Андрей Гинтер] (https://htmlacademy.ru/profile/id781369).
+* Наставник: [Виктория Постнова] (https://htmlacademy.ru/profile/id1714993).
 
 ---
 
