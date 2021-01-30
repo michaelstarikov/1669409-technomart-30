@@ -11,6 +11,7 @@
   --basic-yellow: #ffd180;
   --basic-green: #63a63e;
   --basic-light-green: #5fbb2d;
+  --basic-dark-green: #518534;
   --basic-greylight: #c5c5c5;
   --basic-dark-grey: #293449;
   --basic-extra-dark: #161d29;
@@ -20,6 +21,8 @@
   --basic-very-light-grey: #a9a9a9;
   --basic-light-blue: #f1f5f7;
   --basic-light-grey: rgba(0, 0, 0, 0.0001);
+  --basic-extra-light-blue: #F2F6F8;
+  --basic-light-yellow:#F7F3EC;  
 }
 
 /* Global*/
@@ -482,4 +485,214 @@ img {
 .footer-developed-by a:active {
   color: var(--basic-red);
   text-decoration: none;
+}
+
+/*Catalog*/
+
+/*Header*/
+
+.client-name {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: 400;
+  color: var(--basic-black);
+}
+
+.my-cart,
+.personal-login {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: var(--basic-light-black);
+}
+
+.my-cart:hover,
+.personal-login:hover {
+  color: var(--basic-red);
+}
+
+.client-name:active,
+.my-cart:active,
+.personal-login:active {
+  color: var(--basic-greylight);
+}
+
+/*Breadcrumbs*/
+
+.breadcrumbs {
+  list-style: none;
+}
+
+.breadcrumbs a {
+  line-height: 18px;
+  color: var(--basic-black);
+}
+
+.breadcrumbs-current {
+  line-height: 18px;
+  color: var(--basic-black);
+}
+
+/*Filters*/
+
+.filter legend {
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.filter ul {
+  list-style: none;
+  font-size: 15px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.filters h2 {
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  background-color: var(--basic-light-yellow);
+}
+
+.button-filters {
+  line-height: 18px;
+  background-color: transparent;
+  text-transform: uppercase;   
+  text-align: center;  
+  vertical-align: middle;
+  box-sizing: border-box;  
+  border: 1px solid #E5E5E5;
+}
+
+.sort h2 {
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  background-color: var(--basic-light-yellow);
+}
+
+.sort-list {
+  list-style: none;
+}
+
+.sort-list button {
+  font: inherit;
+  text-align: center;
+  color: var(--basic-black);
+  vertical-align: middle;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-decoration-color: var(--basic-red);
+  background-color: transparent;
+  opacity: 0.3; 
+  border: none;
+}
+
+.sort-list button:hover {
+  color: var(--basic-black);
+  text-decoration-style: solid;
+  opacity: 1;
+}
+
+.sort-list button:active {
+  color: var(--basic-red);
+  text-decoration: none;
+}
+
+/*Catalog list*/
+
+/*Popular products*/
+
+
+.catalog-list {
+  list-style: none;
+}
+
+.catalog-list li {
+  background-color: var(--basic-white);
+  box-sizing: border-box;
+  border: 1px solid var(--basic-extra-light-grey);
+}
+
+.catalog-list h3 {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  color: var(--basic-black);
+}
+
+.button-buy {
+  background-color: var(--basic-green);
+  border-radius: 2px;
+}
+
+.button-buy:hover {
+  background-color: var(--basic-light-green);
+}
+
+.button-buy:active {
+  background-color: var(--basic-dark-green);
+}
+
+.button-in-tab {
+  color: var(--basic-light-black);
+  background-color: transparent;
+  border: 3px solid var(--basic-green);
+  border-radius: 2px;
+}
+
+.button-in-tab:hover {
+  border-color: var(--basic-light-black);
+  background-color: transparent;
+}
+
+.button-in-tab:active {
+  background-color: transparent;
+  opacity: 0.3;
+}
+
+/*Pagination*/
+
+.pagination-list {
+  list-style: none;
+}
+
+.pagination-item a {
+  color: var(--basic-black);
+  background-color: transparent;
+  border: 1px solid #E5E5E5;
+}
+
+.pagination-item a:hover {
+  border: 1px solid #C5C5C5;
+}
+
+.pagination-item a:active {
+  border: 1px solid var(--basic-red);
+}
+
+.pagination-item-current a {
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+  border: 1px solid var(--basic-red);
+}
+
+/*About drills*/
+
+.about-drills {
+  background-color: var(--basic-light-blue);
+}
+
+.about-drills h2 {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+  color: var(--basic-black);
 }
