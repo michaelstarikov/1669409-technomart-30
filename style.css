@@ -439,31 +439,24 @@ img {
 
 /*Header*/
 
-.client-name {
-  font-family: "Cuprum", Arial, sans-serif;
+.client-name {  
   font-size: 21px;
-  line-height: 21px;
-  font-weight: 400;
+  line-height: 21px;  
   color: var(--text-black);
 }
 
-.my-cart,
-.personal-login {
-  font-family: "Cuprum", Arial, sans-serif;
+.personal-data {  
   font-size: 16px;
-  line-height: 18px;
-  font-weight: 400;
+  line-height: 18px;  
   color: var(--section-titles-background);
 }
 
-.my-cart:hover,
-.personal-login:hover {
+.personal-data:hover {
   color: var(--accent-color);
 }
 
 .client-name:active,
-.my-cart:active,
-.personal-login:active {
+.personal-data:active {
   color: var(--active-header-background);
 }
 
@@ -485,25 +478,27 @@ img {
 
 /*Filters*/
 
+.filters {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 19px;
+  font-weight: 400;
+  color: var(--text-black);
+  text-transform: uppercase;
+}
+
+.filters-title {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;    
+  background-color: var(--background-filters-sort);
+}
+
 .filter legend {
   font-size: 17px;
   line-height: 30px;
   font-weight: 700;
   text-transform: uppercase;
-}
-
-.filter ul {
-  list-style: none;
-  font-size: 15px;
-  line-height: 18px;
-  text-transform: uppercase;
-}
-
-.filters h2 {
-  line-height: 18px;
-  font-weight: 400;
-  text-transform: uppercase;
-  background-color: var(--background-filters-sort);
 }
 
 .button-filters {
@@ -516,18 +511,16 @@ img {
   border: 1px solid #E5E5E5;
 }
 
-.sort h2 {
+.sort {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
   line-height: 18px;
   font-weight: 400;
+  color: var(--text-black);
   text-transform: uppercase;
-  background-color: var(--background-filters-sort);
 }
 
-.sort-list {
-  list-style: none;
-}
-
-.sort-list button {
+.sort-list-button {
   font: inherit;
   text-align: center;
   color: var(--text-black);
@@ -541,13 +534,13 @@ img {
   border: none;
 }
 
-.sort-list button:hover {
+.sort-list-button:hover {
   color: var(--text-black);
   text-decoration-style: solid;
   opacity: 1;
 }
 
-.sort-list button:active {
+.sort-list-button:active {
   color: var(--accent-color);
   text-decoration: none;
 }
@@ -556,18 +549,13 @@ img {
 
 /*Popular products*/
 
-
-.catalog-list {
-  list-style: none;
-}
-
-.catalog-list li {
+.catalog-item {
   background-color: var(--text-white);
   box-sizing: border-box;
   border: 1px solid var(--border-color);
 }
 
-.catalog-list h3 {
+.catalog-item-title {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 18px;
   line-height: 20px;
@@ -607,10 +595,6 @@ img {
 
 /*Pagination*/
 
-.pagination-list {
-  list-style: none;
-}
-
 .pagination-item a {
   color: var(--text-black);
   background-color: transparent;
@@ -635,12 +619,4 @@ img {
 
 .about-drills {
   background-color: var(--background-main-footer);
-}
-
-.about-drills h2 {
-  font-family: "Cuprum", Arial, sans-serif;
-  font-size: 30px;
-  line-height: 30px;
-  font-weight: 400;
-  color: var(--text-black);
 }
