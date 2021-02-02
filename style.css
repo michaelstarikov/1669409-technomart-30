@@ -2,27 +2,31 @@
 
 :root {
   --text-black: #000000;
-  --text-section-titles-nav-background: #32425c;
+  --section-titles-background: #32425c;
   --text-white: #ffffff;
   --accent-color: #ee3643;  
   --hover-button: #ca2c37;
   --active-button: #ba2732;
   --footer-accent-color: #ffd180;
-  --hover-button-order-buy: #63a63e;
-  --button-order-buy-in-tab-background: #5fbb2d;
+  --hover-order-buy: #63a63e;
+  --order-buy-background: #5fbb2d;
   --active-button-buy: #518534;
-  --active-header-button-background-promotion-item: #c5c5c5;
-  --background-header-top-footer-top-nav-hover: #293449;
+  --active-header-background: #c5c5c5;
+  --background-header-top: #293449;
   --active-header-top: #161d29;
   --active-site-navigation: #1d2739;
   --border-color: #eaeaea;
   --background-section-title: #f9f5f0;
-  --old-price-promotion-item-background: #a9a9a9;
-  --background-main-text-footer-nav: #f1f5f7;  
-  --basic-extra-light-blue: #F2F6F8;
+  --old-price-background: #a9a9a9;
+  --background-main-footer: #f1f5f7;    
   --background-filters-sort:#F7F3EC;
   --order-button-active:rgba(255, 255, 255, 0.5);
   --social-button-background:#212A3A;  
+  --background-materials: #FFBF47;
+  --background-tools: #3BBCE3;
+  --background-technics: #DC91D8;
+  --background-discounts: #8ED78F;
+  --background-delivery: #FFC047;
 }
 
 /* Global*/
@@ -51,7 +55,7 @@ img {
 .section-title {  
   font-size: 30px;
   line-height: 30px;  
-  color: var(--text-section-titles-nav-background);
+  color: var(--section-titles-background);
   text-transform: uppercase;
 }
 
@@ -91,12 +95,12 @@ img {
 /* Header top list*/
 
 .main-header {
-  background-color: var(--background-main-text-footer-nav);
+  background-color: var(--background-main-footer);
 }
 
 .main-header-top {  
   color: var(--text-white);
-  background-color: var(--background-header-top-footer-top-nav-hover);
+  background-color: var(--background-header-top);
 }
 
 .main-header-logo {
@@ -134,11 +138,11 @@ img {
 
 
 .order {
-  background-color: var(--button-order-buy-in-tab-background);
+  background-color: var(--order-buy-background);
 }
 
 .order:hover {
-  background-color: var(--hover-button-order-buy);
+  background-color: var(--hover-order-buy);
 }
 
 .order:active {
@@ -164,7 +168,7 @@ img {
 .header-adress {  
   font-size: 14px;
   line-height: 24px;  
-  color: var(--text-section-titles-nav-background);
+  color: var(--section-titles-background);
 }
 
 .header-button {  
@@ -178,11 +182,11 @@ img {
 }
 
 .header-button:active {
-  color: var(--active-header-button-background-promotion-item);
+  color: var(--active-header-background);
 }
 
 .main-navigation {
-  background-color: var(--text-section-titles-nav-background);
+  background-color: var(--section-titles-background);
 }
 .site-navigation {
   list-style: none;
@@ -193,7 +197,7 @@ img {
 }
 
 .site-navigation a:hover {
-  background-color: var(--background-header-top-footer-top-nav-hover);
+  background-color: var(--background-header-top);
 }
 
 .site-navigation a:active {
@@ -202,10 +206,6 @@ img {
 }
 
 /*Promotions*/
-
-.promotions {
-  background-color: var(--text-black);
-}
 
 .promotion-item-title {  
   font-size: 24px;
@@ -220,12 +220,32 @@ img {
   color: var(--text-white);
 }
 
+.promotion-materials {
+  background-color: var(--background-materials);
+}
+
+.promotion-tools {
+  background-color: var(--background-tools);
+}
+
+.promotion-technics {
+  background-color: var(--background-technics);
+}
+
+.promotion-discounts {
+  background-color: var(--background-discounts);
+}
+
+.promotion-delivery {
+  background-color: var(--background-delivery);
+}
+
 .promotion-item a:hover {
-  background-color: var(--active-header-button-background-promotion-item);
+  background-color: var(--active-header-background);
 }
 
 .promotion-item a:active {
-  background-color: var(--old-price-promotion-item-background);
+  background-color: var(--old-price-background);
 }
 
 .promotion-slider-title {  
@@ -233,6 +253,10 @@ img {
   line-height: 36px;
   font-weight: 700;
   color: var(--text-white);
+}
+
+.slider {
+  background-color: var(--old-price-background);
 }
 
 .promotion-slider-text {  
@@ -261,7 +285,7 @@ img {
   line-height: 18px;
   font-weight: 700;
   text-decoration: line-through;
-  color: var(--old-price-promotion-item-background);
+  color: var(--old-price-background);
 }
 
 .price-new {
@@ -293,18 +317,17 @@ img {
 /*Services*/
 
 .services {
-  background-color: var(--background-main-text-footer-nav);
+  background-color: var(--background-main-footer);
 }
 
-.services-title {  
+.information-title {  
   font-size: 30px;
   line-height: 30px;  
   color: var(--text-black);
+  text-transform: uppercase;
 }
 
-.services p,
-.about-us p,
-.contacts p {
+.information p {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
@@ -312,32 +335,23 @@ img {
   color: var(--text-black);
 }
 
-.service-button,
-.active-service-button {  
+.service-button {  
   font-size: 21px;
   line-height: 30px;
   font-weight: 700;
   color: var(--text-white);
-  background-color: var(--text-section-titles-nav-background);
+  background-color: var(--section-titles-background);
   vertical-align: middle;
   border: none;
 }
 
 .active-service-button:focus {
   background-color: var(--text-white);
-  color: var(--text-section-titles-nav-background);
+  color: var(--section-titles-background);
 }
 
 .service-button:hover {
-  background-color: var(--background-header-top-footer-top-nav-hover);
-}
-
-.about-us-title,
-.contacts-title {  
-  font-size: 30px;
-  line-height: 30px;  
-  color: var(--text-black);
-  text-transform: uppercase;
+  background-color: var(--background-header-top);
 }
 
 
@@ -348,7 +362,7 @@ img {
 }
 
 .footer-top {
-  background-color: var(--text-section-titles-nav-background);
+  background-color: var(--section-titles-background);
 }
 
 .footer-navigation-list a {  
@@ -373,7 +387,7 @@ img {
 }
 
 .footer-navigation-list a:active {
-  color: var(--background-main-text-footer-nav);
+  color: var(--background-main-footer);
   opacity: 0.5;
   text-decoration: none; 
 }
@@ -385,7 +399,7 @@ img {
 }
 
 .footer-bottom {
-  background-color: var(--background-header-top-footer-top-nav-hover);
+  background-color: var(--background-header-top);
   font-size: 16px;
   line-height: 18px;  
   color: var(--text-white)
@@ -439,7 +453,7 @@ img {
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
-  color: var(--text-section-titles-nav-background);
+  color: var(--section-titles-background);
 }
 
 .my-cart:hover,
@@ -450,7 +464,7 @@ img {
 .client-name:active,
 .my-cart:active,
 .personal-login:active {
-  color: var(--active-header-button-background-promotion-item);
+  color: var(--active-header-background);
 }
 
 /*Breadcrumbs*/
@@ -562,12 +576,12 @@ img {
 }
 
 .button-buy {
-  background-color: var(--hover-button-order-buy);
+  background-color: var(--hover-order-buy);
   border-radius: 2px;
 }
 
 .button-buy:hover {
-  background-color: var(--hover-button-order-buy);
+  background-color: var(--hover-order-buy);
 }
 
 .button-buy:active {
@@ -575,14 +589,14 @@ img {
 }
 
 .button-in-tab {
-  color: var(--text-section-titles-nav-background);
+  color: var(--section-titles-background);
   background-color: transparent;
-  border: 3px solid var(--hover-button-order-buy);
+  border: 3px solid var(--hover-order-buy);
   border-radius: 2px;
 }
 
 .button-in-tab:hover {
-  border-color: var(--text-section-titles-nav-background);
+  border-color: var(--section-titles-background);
   background-color: transparent;
 }
 
@@ -620,7 +634,7 @@ img {
 /*About drills*/
 
 .about-drills {
-  background-color: var(--background-main-text-footer-nav);
+  background-color: var(--background-main-footer);
 }
 
 .about-drills h2 {
