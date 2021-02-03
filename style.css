@@ -490,6 +490,7 @@ img {
   font-size: 13px;
   line-height: 18px;
   color: var(--text-black);
+  text-transform: uppercase;
 }
 
 /*Filters*/
