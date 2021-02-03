@@ -8,8 +8,8 @@
   --hover-button: #ca2c37;
   --active-button: #ba2732;
   --footer-accent-color: #ffd180;
-  --hover-order-buy: #63a63e;
-  --order-buy-background: #5fbb2d;
+  --order-buy-background: #63a63e;
+  --hover-order-buy: #5fbb2d;
   --active-button-buy: #518534;
   --active-header-background: #c5c5c5;
   --background-header-top: #293449;
@@ -19,8 +19,7 @@
   --background-section-title: #f9f5f0;
   --old-price-background: #a9a9a9;
   --background-main-footer: #f1f5f7;    
-  --background-filters-sort:#F7F3EC;
-  --order-button-active:rgba(255, 255, 255, 0.5);
+  --background-filters-sort:#F7F3EC;  
   --social-button-background:#212A3A;  
   --background-materials: #FFBF47;
   --background-tools: #3BBCE3;
@@ -115,9 +114,13 @@ img {
   color: var(--text-white);
 }
 
-.tab:active,
-.cart:active {
+.tab:active {
   background-color: var(--active-header-top);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.cart:active {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .form-search {
@@ -138,15 +141,15 @@ img {
 
 
 .order {
-  background-color: var(--order-buy-background);
-}
-
-.order:hover {
   background-color: var(--hover-order-buy);
 }
 
+.order:hover {
+  background-color: var(--order-buy-background);
+}
+
 .order:active {
-  color:var(--order-button-active);  
+  color: rgba(255, 255, 255, 0.5);  
 }
 
 /*Main-header*/
@@ -240,6 +243,10 @@ img {
   background-color: var(--background-delivery);
 }
 
+.promotion-item a {
+  background-color: rgba(255, 255, 255, 0.5);   
+}
+
 .promotion-item a:hover {
   background-color: var(--active-header-background);
 }
@@ -259,8 +266,16 @@ img {
   background-color: var(--old-price-background);
 }
 
+.slider-main-text {
+  background-color: rgba(0, 0, 0, 0.25);
+}
 .promotion-slider-text {  
   color: var(--text-white);
+}
+
+.slider-button {
+  background-color: transparent;
+  border: none;
 }
 
 /*Popular products*/
@@ -306,13 +321,12 @@ img {
 }
 
 .popular-brands-item:hover {  
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);  
-  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
 }
 
 .popular-brands-item:active {  
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);  
-  background-color: var(--background-main-header-popular-brands-item-active);
+  opacity: 0.5;
 }
 /*Services*/
 
@@ -439,10 +453,18 @@ img {
 
 /*Header*/
 
+.cart-active {
+  background-color: var(--accent-color);
+}
+
 .client-name {  
   font-size: 21px;
   line-height: 21px;  
   color: var(--text-black);
+}
+
+.profile {
+  background-color: var(--text-white);
 }
 
 .personal-data {  
@@ -462,16 +484,10 @@ img {
 
 /*Breadcrumbs*/
 
-.breadcrumbs {
-  list-style: none;
-}
-
-.breadcrumbs a {
-  line-height: 18px;
-  color: var(--text-black);
-}
-
+.breadcrumbs a,
 .breadcrumbs-current {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
   line-height: 18px;
   color: var(--text-black);
 }
@@ -518,6 +534,7 @@ img {
   font-weight: 400;
   color: var(--text-black);
   text-transform: uppercase;
+  background-color: var(--background-filters-sort);
 }
 
 .sort-list-button {
@@ -530,14 +547,18 @@ img {
   text-decoration-style: dashed;
   text-decoration-color: var(--accent-color);
   background-color: transparent;
-  opacity: 0.3; 
+  color: rgba(0, 0, 0, 0.3); 
   border: none;
+}
+
+.sort-active-button {
+  color: var(--accent-color);
+  text-decoration: none;
 }
 
 .sort-list-button:hover {
   color: var(--text-black);
-  text-decoration-style: solid;
-  opacity: 1;
+  text-decoration-style: solid;  
 }
 
 .sort-list-button:active {
@@ -564,7 +585,7 @@ img {
 }
 
 .button-buy {
-  background-color: var(--hover-order-buy);
+  background-color: var(--order-buy-background);
   border-radius: 2px;
 }
 
@@ -579,7 +600,7 @@ img {
 .button-in-tab {
   color: var(--section-titles-background);
   background-color: transparent;
-  border: 3px solid var(--hover-order-buy);
+  border: 3px solid var(--order-buy-background);
   border-radius: 2px;
 }
 
