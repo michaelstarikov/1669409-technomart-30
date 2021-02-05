@@ -46,6 +46,7 @@
   background-color: var(--text-white);
 
   min-height: 100%;
+  min-width: 940px;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
@@ -110,7 +111,7 @@ img {
 
 .main-header-top {  
   display: grid;
-  grid-template-columns: 1fr max-content;
+  grid-template-columns: 1fr 1fr;
   color: var(--text-white);
   background-color: var(--background-header-top);
   width: 940px;
@@ -206,6 +207,7 @@ img {
   font-size: 21px;
   line-height: 21px;  
   color: var(--text-black);
+  background-color: var(--text-white);
 }
 
 .header-button:hover {
@@ -250,6 +252,7 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 20px;  
+  margin-bottom: 20px;
 }
 
 .promotion-item-title {  
@@ -306,6 +309,13 @@ img {
 
 .slider {
   background-color: var(--old-price-background);
+  width: 620px;
+}
+
+.slider-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 20px; 
   margin-bottom: 59px;
 }
 
@@ -325,7 +335,7 @@ img {
 
 .popular-products-title {
   display: grid;
-  grid-template-columns: 1fr min-content;
+  grid-template-columns: 1fr max-content;
   margin-bottom: 20px;  
 }
 
@@ -372,7 +382,7 @@ img {
 
 .popular-brands-title {
   display: grid;
-  grid-template-columns: 1fr min-content;
+  grid-template-columns: 1fr max-content;
   margin-bottom: 20px;
 }
 
@@ -380,6 +390,7 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 20px; 
+  row-gap: 20px;
   margin-bottom: 70px;
 }
 
@@ -414,10 +425,6 @@ img {
   line-height: 30px;  
   color: var(--text-black);
   text-transform: uppercase;
-}
-
-.services-description {
-  order: 1;
 }
 
 .information p {
@@ -458,18 +465,25 @@ img {
 .main-footer-logo {
   background-color: var(--accent-color);
   justify-self: start;
+  
 }
 
 .footer-top-wrapper {
-  background-color: var(--section-titles-background) ;
-}
+  background-color: var(--section-titles-background);
+  }
 
 .footer-top {
   display: grid;
+  grid-template-columns: 1fr 3fr;     
   background-color: var(--section-titles-background);
-  grid-template-columns: 1fr 1fr;
   width: 940px;
   margin: 0 auto;  
+}
+
+.footer-navigation {
+  display: grid;
+  grid-template-columns: max-content 3fr;
+  grid-column: 1 / -1;  
 }
 
 .footer-navigation-list a {  
