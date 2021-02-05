@@ -26,6 +26,7 @@
   --background-technics: #DC91D8;
   --background-discounts: #8ED78F;
   --background-delivery: #FFC047;
+  --background-catalog-title: #F2F6F8;
 }
 
 .page {
@@ -602,7 +603,17 @@ img {
   color: var(--active-header-background);
 }
 
+.catalog-wrapper {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  align-content: start;  
+}
+
 /*Breadcrumbs*/
+
+.breadcrumbs {
+  grid-column: -1 / 1;
+}
 
 .breadcrumbs a,
 .breadcrumbs-current {
@@ -621,7 +632,7 @@ img {
   line-height: 19px;
   font-weight: 400;
   color: var(--text-black);
-  text-transform: uppercase;
+  text-transform: uppercase;  
 }
 
 .filters-title {
@@ -649,12 +660,21 @@ img {
 }
 
 .sort {
+  margin-left: 21px;
+  margin-bottom: 28px;  
+  height: 38px;   
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
   color: var(--text-black);
   text-transform: uppercase;
+  background-color: var(--background-filters-sort);
+  outline: 5px solid rgba(0, 255, 255, 0.7);
+  outline-offset: -5px;
+}
+
+.sort-list {
   background-color: var(--background-filters-sort);
 }
 
@@ -690,6 +710,17 @@ img {
 /*Catalog list*/
 
 /*Popular products*/
+
+.catalog-title {
+  background-color: var(--background-catalog-title);
+  grid-column: 1 / -1;
+}
+
+.catalog {  
+  grid-column: 2;
+  margin-left: 20px; 
+  margin-top: 0;
+}
 
 .catalog-item {
   background-color: var(--text-white);
@@ -759,6 +790,14 @@ img {
 
 /*About drills*/
 
-.about-drills {
+.about-drills-wrapper {  
   background-color: var(--background-main-footer);
+}
+
+.about-drills { 
+  display: grid;
+  grid-template-columns: 1fr;  
+  width: 940px;
+  margin: 0 auto;  
+  background-color: var(--background-main-footer); 
 }
