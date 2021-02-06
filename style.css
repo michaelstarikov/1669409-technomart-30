@@ -682,10 +682,7 @@ img {
   border: 1px solid #E5E5E5;
 }
 
-.sort {
-  margin-left: 21px;
-  margin-bottom: 28px;  
-  height: 38px;   
+.sort {       
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -693,12 +690,11 @@ img {
   color: var(--text-black);
   text-transform: uppercase;
   background-color: var(--background-filters-sort);
-  outline: 5px solid rgba(0, 255, 255, 0.7);
-  outline-offset: -5px;
+  
 }
 
-.sort-list {
-  background-color: var(--background-filters-sort);
+.sort-list { 
+  background-color: var(--background-filters-sort);  
 }
 
 .sort-list-button {
@@ -741,8 +737,7 @@ img {
 
 .catalog {  
   grid-column: 2;
-  margin-left: 20px; 
-  margin-top: 0;
+  margin-left: 20px;  
 }
 
 .catalog-item {
