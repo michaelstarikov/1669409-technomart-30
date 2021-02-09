@@ -111,8 +111,8 @@ img {
 }
 
 .main-header-top {  
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+ justify-content: space-between;
   color: var(--text-white);
   background-color: var(--background-header-top);
   width: 940px;
@@ -131,6 +131,10 @@ img {
 
 .main-header-logo:active {
   background-color: var(--active-button);
+}
+
+.header-top-list {
+  margin: 0;
 }
 
 .header-top-list a {
@@ -341,21 +345,30 @@ img {
 }
 
 .popular-products-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  column-gap: 20px;  
+  display: flex;  
   margin-bottom: 70px;
 }
 
 .popular-products-item {
   background-color: var(--text-white);
+  width: 220px;
+  min-height: 318px;
+  margin-right: 20px;
   box-sizing: border-box;
   border: 1px solid var(--border-color);
 }
 
+.popular-products-item:nth-child(4n) {
+  margin-right: 0;
+}
+
+
 .popular-products-item-title {
   font-family: "PT Sans", Arial, sans-serif;
+  text-align: center;
   font-size: 18px;
+  margin-left: 18px;
+  margin-right: 17px;
   line-height: 20px;
   font-weight: 700;
   color: var(--text-black);
@@ -388,17 +401,23 @@ img {
 }
 
 .popular-brands-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  column-gap: 20px; 
-  row-gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
   margin-bottom: 70px;
 }
 
 .popular-brands-item {
+  width: 220px;
+  min-height: 145px;
+  margin-right: 20px;
+  margin-bottom: 20px;
   background-color: var(--text-white);
   box-sizing: border-box;
   border: 1px solid var(--border-color);
+}
+
+.popular-brands-item:nth-child(4n) {
+  margin-right: 0;
 }
 
 .popular-brands-item:hover {  
