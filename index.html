@@ -22,24 +22,25 @@
           <a class="main-header-logo">
             <img src="img/logo-technomart.svg" width="107" height="17" alt="Логотип">
           </a>
-          <form action="https://echo.htmlacademy.ru/." method="POST">
-            <input class="form-search" type="search" placeholder="Поиск:">
+          <form class="searching" action="https://echo.htmlacademy.ru/." method="POST">            
+            <input class="form-search" type="text" placeholder="Поиск:">            
+            <svg class="icon-search" width="17" height="17" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z" fill="white"/></svg>              
           </form>
         </div>
         <ul class="header-top-list reset-list">
-          <li><a class="tab" href="">Закладки</a></li>
-          <li><a class="cart" href="">Корзина</a></li>
+          <li><a class="tab top-header-button" href="">Закладки: 0</a></li>
+          <li><a class="cart top-header-button" href="">Корзина: 0</a></li>
           <li><a class="order" href="">Оформить заказ</a></li>
         </ul>
       </div>
     </div>
     <div class="site-info-wrapper">
       <div class="site-description-wrapper">
-        <div class="site-description">
+        <p class="site-description">
           Интернет-магазин<br>
           строительных материалов<br>
           и инструментов для ремонта
-        </div>
+        </p>
       </div>
       <div class="header-contacts-wrapper">
         <a class="header-telephone" href="tel:+78125550555">+7 (812) 555-05-55</a>
@@ -69,7 +70,7 @@
       <h2 class="visually-hidden">Промо-блок</h2>
       <div class="promotion-wrapper">
         <div class="promotion-item promotion-materials promotion-item-new">
-          <h3 class="promotion-item-title">Материалы</h3>          
+          <h3 class="promotion-item-title">Материалы</h3>
           <a href="">На любой вкус</a>
         </div>
         <div class="promotion-item promotion-tools">
@@ -94,21 +95,19 @@
               <h3 class="promotion-slider-title">Перфораторы</h3>
               <p class="promotion-slider-text">Настоящие мужские игрушки</p>
             </div>
-            <button class="slider-button button-back"><img src="img/slider-button-back.svg" alt="Назад"></button>
-            <button class="slider-button button-forward"><img src="img/slider-button-forward.svg" alt="Вперед"></button>
             <a class="button slider-catalog-button" href="catalog.html">Открыть каталог</a>
           </div>
-
           <div class="slider-item slide-drills">
             <div class="slider-main-text">
               <h3 class="promotion-slider-title">Дрели</h3>
               <p class="promotion-slider-text">Соседям на радость!</p>
             </div>
-            <button class="slider-button button-back"><img src="img/slider-button-back.svg" alt="Назад"></button>
-            <button class="slider-button button-forward"><img src="img/slider-button-forward.svg" alt="Вперед"></button>
             <a class="button slider-catalog-button" href="catalog.html">Открыть каталог</a>
           </div>
-
+          <div class="slider-buttons">
+            <button class="slider-button button-back"><img src="img/slider-button-back.svg" alt="Назад"></button>
+            <button class="slider-button button-forward"><img src="img/slider-button-forward.svg" alt="Вперед"></button>
+          </div>
           <div class="slider-controls">
             <button class="current" type="button" aria-label="Первый слайд"></button>
             <button type="button" aria-label="Второй слайд"></button>
@@ -124,42 +123,42 @@
       <ul class="popular-products-list reset-list">
         <li class="popular-products-item">
           <a href="">
-            <div class="popular-product-image">
+            <p class="popular-product-image">
               <img class="bfg9000" src="img/bfg9000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 9000">
-            </div>
-            <div class="popular-products-item-title">Перфоратор BOSCH BFG 9000</div>
-            <div class="price-old">32500 Р.</div>
-            <div class="price-new">25500 Р.</div>
+            </p>
+            <h3 class="popular-products-item-title">Перфоратор BOSCH BFG 9000</h3>
+            <p class="price-old">32500 Р.</p>
+            <p class="price-new">25500 Р.</p>
           </a>
         </li>
         <li class="popular-products-item product-new">
           <a href="">
-            <div class="popular-product-image">
+            <p class="popular-product-image">
               <img class="bfg3000" src="img/bfg3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
-            </div>
-            <div class="popular-products-item-title">Перфоратор BOSCH BFG 3000</div>            
-            <div class="price-old">22500 Р.</div>
-            <div class="price-new">15500 Р.</div>
+            </p>
+            <h3 class="popular-products-item-title">Перфоратор BOSCH BFG 3000</h3>
+            <p class="price-old">22500 Р.</p>
+            <p class="price-new">15500 Р.</p>
           </a>
         </li>
         <li class="popular-products-item">
           <a href="">
-            <div class="popular-product-image">
+            <p class="popular-product-image">
               <img class="bfg6000" src="img/bfg6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
-            </div>
-            <div class="popular-products-item-title">Перфоратор BOSCH BFG 6000</div>
-            <div class="price-old">30500 Р.</div>
-            <div class="price-new">25500 Р.</div>
+            </p>
+            <h3 class="popular-products-item-title">Перфоратор BOSCH BFG 6000</h3>
+            <p class="price-old">30500 Р.</p>
+            <p class="price-new">25500 Р.</p>
           </a>
         </li>
         <li class="popular-products-item product-new">
           <a href="">
-            <div class="popular-product-image">
+            <p class="popular-product-image">
               <img class="bfg2000" src="img/bfg2000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
-            </div>
-            <div class="popular-products-item-title">Перфоратор BOSCH BFG 2000</div>            
-            <div class="price-old">22500 Р.</div>
-            <div class="price-new">12500 Р.</div>
+            </p>
+            <h3 class="popular-products-item-title">Перфоратор BOSCH BFG 2000</h3>
+            <p class="price-old">22500 Р.</p>
+            <p class="price-new">12500 Р.</p>
           </a>
         </li>
       </ul>
@@ -302,13 +301,15 @@
     </div>
     <div class="footer-bottom-wrapper">
       <div class="footer-bottom">
-        <div class="footer-copyright">          
+        <section class="footer-copyright">
+          <h2 class="visually-hidden">Копирайт</h2>
           <div>
             © 2010-2019 Компания "Техномарт"<br>
             Все права защищены
           </div>
-        </div>
-        <div class="footer-social">          
+        </section>
+        <section class="footer-social">
+          <h2 class="visually-hidden">Соцсети</h2>
           <ul class="footer-social-list reset-list">
             <li>
               <a class="social-button" href="#">
@@ -326,15 +327,15 @@
               </a>
             </li>
           </ul>
-        </div>
-        <div class="footer-contacts">          
-          <div class="footer-contacts-title">Обратная связь:</div>
+        </section>
+        <section class="footer-contacts">
+          <h2 class="footer-contacts-title">Обратная связь:</h2>
           <a class="footer-mail" href="mailto:mail.htmlacademy.ru">mail.htmlacademy.ru</a>
-        </div>
-        <div class="footer-developed-by">          
-          <div class="footer-developed-by-title">Разработано —</div>
+        </section>
+        <section class="footer-developed-by">
+          <h2 class="footer-developed-by-title">Разработано —</h2>
           <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
-        </div>
+        </section>
       </div>
     </div>
   </footer>
