@@ -27,6 +27,7 @@
   --background-discounts: #8ED78F;
   --background-delivery: #FFC047;
   --background-catalog-title: #F2F6F8;
+  --icon-enter: #3D546F;
 }
 
 .page {
@@ -171,8 +172,7 @@ img {
 .header-top-list {
   display: flex;
   flex-wrap: wrap;    
-  margin: 0;
-  
+  margin: 0;  
 } 
 
 
@@ -181,45 +181,36 @@ img {
   color: var(--text-white);
 }
 
-.tab {
-  padding: 9px 24px 9px 43px;
+
+.top-header-button {
+  padding: 9px 25px 9px 45px;
   display: block;  
   position: relative;
   margin: 0;
-  
 }
 
-.tab::before {
+.top-header-button::before {
   content: "";
   position: absolute;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
+}
+
+.tab::before {  
   top: 13px;
   left: 20px;  
   width: 14px;
   height: 16px;
-  background-image: url("img/tab.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  opacity: 0.3;
+  background-image: url("img/tab.svg");  
 }
 
-.cart {
-  position: relative;
-  display: block;
-  padding: 9px 26px 9px 49px;
-  margin: 0;
-}
-
-.cart::before {
-  content: "";
-  position: absolute;
+.cart::before {  
   left: 26px;
   top: 13px;
   width: 15px;
   height: 15px;
-  background-image: url("img/icon-cart.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  opacity: 0.3;
+  background-image: url("img/icon-cart.svg");  
 }
 
 .top-header-button:hover::before {
@@ -334,17 +325,14 @@ img {
   display: block;
   width: 270px;
   height: 45px;
-  font-size: 21px;  
-  padding-left: 74px;  
-  padding-top: 7px;
-  padding-bottom: 8px;
+  font-size: 21px;   
+  padding: 5px 35px 6px 74px;
   line-height: 30px;
   font-weight: 700;
   border: 3px solid #FFFFFF;
   box-sizing: border-box;
   color: var(--accent-color);
-  justify-content: center;  
-}
+}  
 
 .header-telephone::before {
   content: "";
@@ -384,20 +372,14 @@ img {
   margin-right: 7px;  
 }
 
-.enter::before {
-  content: "";
-  position: absolute; 
+.icon-login {
+  position: absolute;
   top: 14px; 
-  left: 19px;
-  width: 19px;
-  height: 19px;
-  background-image: url("img/icon-login.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;  
+  left: 19px;  
 }
 
-.enter:hover:before {
-  background-image: url("img/icon-login-hover.svg");
+.enter:hover .icon-login path {
+  fill: var(--icon-enter);
 }
 
 .enter:active:before {
@@ -739,7 +721,8 @@ img {
 }
 
 .popular-product-image img {
-  justify-content: center;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .popular-products-item:nth-child(4n) {
