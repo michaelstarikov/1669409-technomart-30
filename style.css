@@ -710,7 +710,7 @@ img {
 
 .popular-products-item a {
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;    
   align-items: center;   
 }
 
@@ -753,6 +753,8 @@ img {
 .price-old {
   margin-bottom: 13px;
   margin-top: 7px;
+  min-width: 65px;
+  min-height: 18px;
   justify-self: center;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 17px;
@@ -762,11 +764,13 @@ img {
   color: var(--old-price-background);
 }
 
-.price-new {  
+.price-new {    
+  display: inline-block;
   width: 141px;
   height: 38px;
   text-align: center;
-  margin: 0;
+  margin: 0;  
+  margin-bottom: 21px;
   padding-top: 10px;  
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 17px;
@@ -1218,10 +1222,10 @@ img {
   position: absolute;
   background-repeat: no-repeat;
   background-position: 0 0;   
-  width: 6px;
-  height: 6px;  
+  width: 4px;
+  height: 4px;  
   border-radius: 50%;
-  top: 6px;
+  top: 8px;
   left: 88px;
   background-color: var(--section-titles-background);
 }
@@ -1287,6 +1291,77 @@ img {
 }
 
 /*Filters*/
+
+.range-filter {
+  margin-top: 10px;
+}
+
+.range-controls {
+  position: relative;
+  height: 41px;
+  background-color: var(--background-filters-sort);
+  border-radius: 5px;
+  margin-bottom: 9px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: #d7dcde;
+}
+
+.range-controls .bar {
+  width: 70%;
+  height: 2px;
+  background: #00ca74;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 31px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 18px;
+}
+
+.range-controls .toggle-max {
+  left: 142px;
+}
+
+.price-controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-controls input {
+  width: 80px;
+  padding: 10px 10px;   
+  padding-bottom: 10px;
+  text-align: center;
+  color: var(--text-black);
+  border: none;
+  border-radius: 5px;
+  background: var(--background-filters-sort);
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.bar-line {
+  margin: 0;
+  margin-top: 7px;
+}
 
 .filters {    
   font-family: "PT Sans", Arial, sans-serif;
@@ -1363,7 +1438,7 @@ img {
   opacity: 0.3;
 }
 
-.filter legend {
+.filter legend {  
   font-size: 17px;
   line-height: 30px;
   font-weight: 700;
@@ -1439,23 +1514,40 @@ img {
   border: 1px solid #E5E5E5;
 }
 
-.sort {       
+.sort { 
+  display: grid;
+  grid-template-columns: max-content 1fr;      
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
+  width: 700px;
+  height: 38px;
   color: var(--text-black);
   text-transform: uppercase;
   background-color: var(--background-filters-sort);
-  
+  margin-bottom: 28px;
+  border-radius: 3px;  
+}
+
+.sort h2 {
+  margin: 0;
 }
 
 .sort-list { 
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;       
+  margin-left: 140px;
+  padding-top: 10px;  
   background-color: var(--background-filters-sort);  
 }
 
 .sort-list-button {
-  font: inherit;
+  padding:0;  
+  font: inherit;   
+  outline: none;
+  margin-right: 70px;
   text-align: center;
   color: var(--text-black);
   vertical-align: middle;
@@ -1468,10 +1560,42 @@ img {
   border: none;
 }
 
-.sort-active-button {
+.icon-down {
+  position: absolute;
+  left: 400px;  
+}
+
+
+.icon-up {
+  position: absolute;
+  transform: rotate(180deg);
+  left:430px
+}
+
+
+.sort-down:hover path,
+.sort-up:hover path {
+  fill: var(--text-black);
+}
+
+
+.sort-down:active path,
+.sort-up:active path{
+  fill: var(--accent-color);
+}
+
+
+.sort-active-button,
+.sort-active-button path {
   color: var(--accent-color);
+  fill: var(--accent-color);
   text-decoration: none;
 }
+
+.icon-active .sort-down path {
+  fill: var(--accent-color);
+}
+
 
 .sort-list-button:hover {
   color: var(--text-black);
@@ -1495,6 +1619,7 @@ img {
 .catalog {  
   grid-column: 2;
   margin-left: 20px;  
+  margin-top: 10px;
 }
 
 .catalog-list {
@@ -1507,6 +1632,7 @@ img {
   width: 220px;
   min-height: 318px;
   margin-right: 20px;
+  margin-bottom: 18px;
   box-sizing: border-box;
   border: 1px solid var(--border-color);
 }
@@ -1522,14 +1648,23 @@ img {
 .catalog-item a {
   display: flex;
   flex-direction: column;  
-  align-items: center;   
+  align-items: center;  
+}
+
+.catalog-item-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 184px;
+  height: 164px;  
+  margin: 0;
+  margin-top: 6px;
 }
 
 .catalog-item-image img {
   text-align: center;
   vertical-align: middle;
 }
-
 
 .catalog-item-title {
   font-family: "PT Sans", Arial, sans-serif;
@@ -1576,10 +1711,36 @@ img {
 
 /*Pagination*/
 
-.pagination-item a {
+.pagination-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 69px;
+  margin-top: 28px;
+}
+
+.pagination-item { 
+  margin-right: 10px;  
+}
+
+.pagination-item a {  
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;  
+  text-transform: uppercase;
+  display: block;  
+  padding: 10px 15px;
   color: var(--text-black);
-  background-color: transparent;
+  background-color: transparent; 
   border: 1px solid #E5E5E5;
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+
+.pagination-next {
+  width: 140px;
+  text-align: center;
 }
 
 .pagination-item a:hover {
@@ -1603,9 +1764,13 @@ img {
 }
 
 .about-drills { 
+  padding-top: 64px;
+  padding-bottom: 68px;
   display: grid;
   grid-template-columns: 1fr;  
   width: 940px;
   margin: 0 auto;  
   background-color: var(--background-main-footer); 
 }
+
+
