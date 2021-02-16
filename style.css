@@ -206,7 +206,7 @@ img {
 }
 
 .cart::before {  
-  left: 26px;
+  left: 22px;
   top: 13px;
   width: 15px;
   height: 15px;
@@ -380,6 +380,10 @@ img {
 
 .enter:hover .icon-login path {
   fill: var(--icon-enter);
+}
+
+.enter:active .icon-login path {
+  fill: var(--active-header-background);
 }
 
 .header-button:hover {
