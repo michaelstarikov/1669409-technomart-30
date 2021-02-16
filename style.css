@@ -382,11 +382,6 @@ img {
   fill: var(--icon-enter);
 }
 
-.enter:active:before {
-  background-image: url("img/icon-login.svg");
-  
-}
-
 .header-button:hover {
   color: var(--accent-color);
 }
