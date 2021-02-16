@@ -255,6 +255,7 @@ img {
 
 .searching:focus .icon-search path {
   fill: var(--accent-color);
+  opacity: 1;
 }
 
 .form-search:focus {
