@@ -1160,7 +1160,7 @@ img {
   padding: 12px 56px;
   font-size: 21px;
   line-height: 21px;  
-  color: var(--text-black);
+  color: var(--text-black);  
 }
 
 .profile-enter {
@@ -1171,9 +1171,13 @@ img {
 }
 
 .profile-exit {
+  display: block;  
   position: absolute;
-  top: 14px;
-  right: 17px;
+  margin: 0;
+  padding: 14px 17px 14px 20px;  
+  left: 240px;
+  top: 0;
+  
 }
 
 .client-name:hover .profile-enter path {
@@ -1512,6 +1516,7 @@ img {
   vertical-align: middle;
   box-sizing: border-box;  
   border: 1px solid #E5E5E5;
+  outline: none;
 }
 
 .sort { 
