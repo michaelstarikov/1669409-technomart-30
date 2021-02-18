@@ -358,36 +358,41 @@ img {
 }
 
 .header-buttons {
- width: 281px;
+  display: flex;  
+  margin-top: 41px;
+  height: 45px;
 }
 
 .header-button {    
-  display: inline-block; 
-  margin-top: 41px;
+  display: flex;   
   font-size: 21px;
   line-height: 21px; 
-  padding: 12px 24px;
+  padding: 12px 0px;
   color: var(--text-black);
   background-color: var(--text-white);
+  align-items: center;
 }
 
-.enter {
-  position: relative;   
-  padding-left: 45px;
-  margin-right: 7px;  
+.enter {    
+  margin-right: 10px;
+  padding-right: 27px;
+  padding-left: 19px;
 }
 
-.icon-login {
-  position: absolute;
-  top: 14px; 
-  left: 19px;  
+.register {
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
-.enter:hover .icon-login path {
+.header-button .profile-icon {  
+  margin-right: 6px;  
+}
+
+.header-button:hover .profile-icon path {
   fill: var(--icon-enter);
 }
 
-.enter:active .icon-login path {
+.enter:active .profile-icon path {
   fill: var(--active-header-background);
 }
 
@@ -1151,45 +1156,23 @@ img {
 }
 
 .profile {
+  display: flex;
   background-color: var(--text-white);
   min-height: 45px;  
 }
 
-.client-name {  
-  display: inline-block;
-  margin: 12px 57px 12px 56px;
-  font-size: 21px;
-  line-height: 21px;  
-  color: var(--text-black);  
+.client-name {
+  padding-left: 15px;
+  padding-right: 10px;
 }
 
-.profile-enter {  
-  position: absolute;
-  left: 17px;
-  top: 11px;
-  margin-right: 21px;  
+.client-name .profile-icon {
+  margin-right: 21px;
 }
 
-.profile-exit {   
-  position: absolute;  
-  right: 17px;
-  top: 13px;  
-}
-
-.client-name:hover .profile-enter path {
-  fill: var(--icon-enter);
-}
-
-.client-name:active .profile-enter path {
-  fill: var(--active-header-background);
-}
-
-.profile-exit:hover .profile-exit-icon path {
-  fill: var(--icon-enter);
-}
-
-.profile-exit:active .profile-exit-icon path {
-  fill: var(--active-header-background);
+.profile-exit {
+  padding-right: 10px;
+  padding-left: 17px;
 }
 
 
