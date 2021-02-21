@@ -29,6 +29,7 @@
   --background-catalog-title: #F2F6F8;
   --icon-enter: #3D546F;
   --checkbox: #B5B5B5;
+  --modal-background: #F4F4F4;
 }
 
 .page {
@@ -124,6 +125,104 @@ img {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+/* Modals*/
+.modal {
+  position: fixed;  
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  color: var(--text-black);
+  background-color: var(--text-white);  
+  background-position: 0 0;
+  background-repeat: repeat;
+  border-top: 7px solid var(--accent-color);
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+}
+
+.modal-login {
+  width: 620px;
+  height: 430px;    
+  bottom: 355px;
+  left: -15px;
+  top: auto;
+}
+
+.modal-content {
+  padding: 40px 80px 37px 80px
+}
+
+.modal-input {  
+  border: 2px;
+  display: flex;
+  justify-content: space-between;  
+  
+}
+
+.modal-field{  
+  margin: 0;
+}
+  
+
+.input-modal {    
+  padding: 7px 7px;
+  margin-right: 20px;
+  margin-top: 11px;
+  width: 200px;
+  border: 2px solid var(--active-header-background);
+  border-radius: 2px;
+  outline: 0;
+}
+
+.input-modal::placeholder {
+  font-family: "PT Sans", Arial, sans-serif; 
+  font-size: 13px;
+  line-height: 24px;
+  color: var(--old-price-background);
+  
+}
+
+.modal-text {
+  margin-top: 13px;
+}
+
+
+.text-icon {
+  margin-top: 11px;
+  padding-left: 12px;
+  padding-top: 6px;
+  width: 435px;
+  resize: none;
+  height: 100px;  
+  border: 2px solid var(--active-header-background);
+  border-radius: 2px;
+}
+
+.modal-footer {
+  height: 112px;
+  width: 100%;
+  background-color: var(--modal-background);
+}
+
+.button-modal {
+  margin: 37px 80px;
+  width: 460px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 11px;
+  width: 21px;
+  height: 21px;
+  background-color: transparent;
+  background-image: url(img/exit-modal.svg);
+  border: 0;
+  cursor: pointer;
+  outline: none;
 }
 
 /* Header top list*/
@@ -303,7 +402,7 @@ img {
 }
 
 .site-description-wrapper {
-  margin-top: 42px;
+  margin-top: 45px;
   margin-left: 30px;  
 }  
 
@@ -317,8 +416,8 @@ img {
 }
 
 .header-contacts-wrapper {
-  margin-top: 41px;
-  margin-left: 35px; 
+  margin-top: 45px;
+  margin-left: 17px; 
 }
 
 .header-telephone {  
@@ -359,7 +458,7 @@ img {
 
 .header-buttons {
   display: flex;  
-  margin-top: 41px;
+  margin-top: 45px;
   height: 45px;
 }
 
@@ -408,8 +507,8 @@ img {
   background-color: var(--section-titles-background);   
   width: 940px;
   margin: 0 auto;
-  margin-top: 20px;  
-  margin-bottom: 60px;
+  margin-top:27px;
+  margin-bottom:60px;
   box-shadow: inset 0px -5px 0px #293449;
 }
 
@@ -423,7 +522,8 @@ img {
 
 .site-navigation a {  
   display: block;  
-  padding: 16px;
+  padding-top: 16px;
+  padding-bottom: 20px;
   color: var(--text-white);
 }
 
@@ -453,7 +553,7 @@ img {
                        "slider slider delivery";
   column-gap: 20px;  
   row-gap: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 58px;
   margin-top: 59px;
 }
 
@@ -626,8 +726,7 @@ img {
 .slider-controls {
   position: absolute;
   bottom: 36px;
-  left: 295px;
-  z-index: 20;
+  left: 295px;  
   display: flex;
   width: 30px;
   justify-content: space-between;
@@ -691,13 +790,13 @@ img {
 .popular-products-title a {
   margin-top: 25px;
   margin-bottom: 26px;
-  margin-right: 19px;
+  margin-right: 15px;
 
 }
 
 .popular-products-list {
   display: flex; 
-  margin-bottom: 70px;
+  margin-bottom: 69px;
 }
 
 .popular-products-item {    
@@ -722,16 +821,18 @@ img {
 .popular-product-image {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center;  
   width: 184px;
   height: 164px;  
-  margin: 0;
+  margin-bottom: 5px;
   margin-top: 6px;
 }
 
 .popular-product-image img {
   text-align: center;
   vertical-align: middle;
+  object-fit: contain;
+  
 }
 
 .popular-products-item:nth-child(4n) {
@@ -757,7 +858,7 @@ img {
  
 .price-old {
   margin-bottom: 13px;
-  margin-top: 7px;
+  margin-top: 9px;
   min-width: 65px;
   min-height: 18px;
   justify-self: center;
@@ -774,8 +875,7 @@ img {
   width: 141px;
   height: 38px;
   text-align: center;
-  margin: 0;  
-  margin-bottom: 21px;
+  margin: 0;    
   padding-top: 10px;  
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 17px;
@@ -807,7 +907,7 @@ img {
 .popular-brands-list {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 70px;
+  margin-bottom: 45px;
 }
 
 .popular-brands-item {   
@@ -853,7 +953,7 @@ img {
 
 .services .services-info-text {  
   position: absolute;
-  margin-top: 66px;
+  margin-top: 70px;
   grid-column: 1 / -1;  
 }
 
@@ -870,13 +970,13 @@ img {
   font-size: 13px;
   line-height: 24px;
   font-weight: 400;
+  margin-top:25px;
   color: var(--text-black);
 }
 
 .services-list {
-  position: absolute;
-  margin-bottom: 99px;
-  margin-top: 238px;
+  position: absolute;  
+  margin-top: 240px;
 }
 
 .services-list::after{
@@ -898,6 +998,8 @@ img {
   font-size: 21px;
   line-height: 30px;
   font-weight: 700;
+  text-align:left;
+  padding-left:20px;  
   color: var(--text-white);
   background-color: var(--section-titles-background);
   vertical-align: middle;  
@@ -918,7 +1020,7 @@ img {
 
 .service-description {
   position: absolute;
-  top: 227px;
+  top: 210px;
   left: 320px;
 }
 
@@ -945,7 +1047,17 @@ img {
   margin-top: 72px;
 }
 
+.about-us p {
+  margin-bottom:0;
+}
+
+
+.about-company {
+  width: 220px;
+}
+
 .transport-companies-list {
+  margin-top: 6px;
   margin-bottom: 20px;
 }
 
@@ -960,7 +1072,7 @@ img {
   position: absolute; 
   left: 0;
   top: 10px;
-  width: 25px;  
+  width: 22px;  
   border: 1px solid var(--accent-color);
 }
 
@@ -968,8 +1080,13 @@ img {
   margin:0;
 }
 
+.contacts{
+  margin-left:15px;
+}
+
+
 .contacts .map {
-  margin-top: 10px;  
+  margin-top: 20px;  
   margin-bottom: 20px;
   width: 300px;
   height: 158px;
@@ -1050,7 +1167,7 @@ img {
   justify-content: space-between;
   width: 525px;
   margin-right: 0;
-  margin-top: -30px;  
+  margin-top: -25px;  
 }
 
 .footer-promotions-list a {  
@@ -1099,10 +1216,6 @@ img {
   margin: 0;
 }
 
-.footer-social-list {   
-  width: 134px;  
-}
-
 .footer-contacts a,
 .footer-developed-by a {   
   color: var(--footer-accent-color);
@@ -1124,6 +1237,7 @@ img {
   flex-wrap: wrap;
   justify-content: space-between;
   width: 134px;  
+  margin-left: 70px;
 }
 
 .social-button {
