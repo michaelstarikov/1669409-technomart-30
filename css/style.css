@@ -38,8 +38,7 @@
 
 /* Global*/
 
-.page-body {
-  min-width: 1200px;
+.page-body {  
   margin: 0;
   padding: 0;
   font-family: "Cuprum", Arial, sans-serif;
@@ -152,8 +151,7 @@ img {
 .modal-map {
   width: 943px;
   height: 449px;
-  bottom: 333px;
-  top: auto;
+  top: 10px;
 }
 
 .modal-map iframe {
@@ -163,9 +161,7 @@ img {
 .modal-login {  
   width: 620px;
   height: 430px;    
-  bottom: 355px;
-  left: -15px;
-  top: auto;
+  top: 10px;
 }
 
 .modal-content {
