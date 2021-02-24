@@ -1319,7 +1319,7 @@ img {
 .profile-section {
   position: relative;
   display: block;  
-  margin-top: 41px;  
+  margin-top: 45px;  
 }
 
 .profile {
@@ -1330,7 +1330,7 @@ img {
 
 .client-name {
   padding-left: 15px;
-  padding-right: 10px;
+  padding-right: 5px;
 }
 
 .client-name .profile-icon {
@@ -1345,6 +1345,7 @@ img {
 
 .personal-data-buttons {
   text-align: center;   
+  margin-top: 5px;
 }
 
 .personal-data {   
@@ -1415,8 +1416,8 @@ img {
   background-position: 0 0;   
   width: 7px;
   height: 11px; 
-  top: 7px;
-  left: 15px;
+  top: 5px;
+  left: 20px;
   background-image: url(../img/breadcrumbs-arrow.svg);
 }
 
@@ -1429,21 +1430,19 @@ img {
   padding-left: 0;
 }
 
-.catalog-title {
+.catalog-title {     
   margin-bottom: 8px;
 }
 
-.catalog-title h1 { 
-  margin-left: 29px;
-  margin-top: 29px;
-  margin-bottom: 30px;
+.catalog-title h1 {   
+  margin: 25px 29px 30px 29px;
   
 }
 
 /*Filters*/
 
 .range-filter {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .range-controls {
@@ -1596,13 +1595,17 @@ img {
 }
 
 .filter-checkbox {
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   margin-top: 15px;
+}
+
+.filter-checkbox:last-child {
+  margin-bottom:5px;
 }
 
 .filter-radio {
   margin-bottom: 16px;
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .filter-radio label {
@@ -1807,14 +1810,15 @@ img {
   align-items: center;
   justify-content: center;
   width: 184px;
-  height: 164px;  
-  margin: 0;
+  height: 164px;    
+  margin-bottom: 9px;
   margin-top: 6px;
 }
 
 .catalog-item-image img {
   text-align: center;
   vertical-align: middle;
+  object-fit: contain;
 }
 
 .catalog-item-title {
@@ -1867,7 +1871,7 @@ img {
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
-  margin-bottom: 69px;
+  margin-bottom: 60px;
   margin-top: 28px;
 }
 
@@ -1916,7 +1920,7 @@ img {
 
 .about-drills { 
   padding-top: 64px;
-  padding-bottom: 68px;
+  padding-bottom: 57px;
   display: grid;
   grid-template-columns: 1fr;  
   width: 940px;
