@@ -168,7 +168,7 @@ img {
   padding: 40px 80px 37px 80px
 }
 
-.modal-input {  
+.modal-username-wrapper {  
   border: 2px;
   display: flex;
   justify-content: space-between;  
@@ -1047,41 +1047,34 @@ img {
 
 .service-slide {
   display: none;  
+  height: 276px;
+  width: 620px;
+  background-repeat: no-repeat;
 }
 
 .service-slide-current {
   display: block;
 }
 
-.delivery-slide {  
-  height: 276px;
-  width: 620px;
-  background-image: url(../img/delivery-service.png);
-  background-repeat: no-repeat;
+.delivery-slide {   
+  background-image: url(../img/delivery-service.png);  
   background-position: 150px 21px;  
 }
 
-.guarantee-slide {  
-  height: 276px;
-  width: 620px;
-  background-image: url(../img/guarantee.png);
-  background-repeat: no-repeat;
+.guarantee-slide {    
+  background-image: url(../img/guarantee.png);  
   background-position: 235px -1px;  
 }
 
-.credit-slide {  
-  height: 276px;
-  width: 620px;
-  background-image: url(../img/credit.png);
-  background-repeat: no-repeat;
+.credit-slide {    
+  background-image: url(../img/credit.png);  
   background-position: 160px -3px;  
 }
 
 .credit-button {
   margin-top: 10px;
+  height: 38px;
 }
-
-
 
 .about-us-wrapper {
   display: grid;
