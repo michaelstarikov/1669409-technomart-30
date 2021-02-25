@@ -94,6 +94,7 @@ img {
   padding-top: 10px;
   padding-bottom: 10px;   
   height: 18px;
+  outline: none;
 }
 
 .button:hover {
@@ -1306,7 +1307,7 @@ img {
 .profile-section {
   position: relative;
   display: block;  
-  margin-top: 41px;  
+  margin-top: 45px;  
 }
 
 .profile {
@@ -1317,7 +1318,7 @@ img {
 
 .client-name {
   padding-left: 15px;
-  padding-right: 10px;
+  padding-right: 5px;
 }
 
 .client-name .profile-icon {
@@ -1332,6 +1333,7 @@ img {
 
 .personal-data-buttons {
   text-align: center;   
+  margin-top: 5px;
 }
 
 .personal-data {   
@@ -1402,8 +1404,8 @@ img {
   background-position: 0 0;   
   width: 7px;
   height: 11px; 
-  top: 7px;
-  left: 15px;
+  top: 5px;
+  left: 20px;
   background-image: url(../img/breadcrumbs-arrow.svg);
 }
 
@@ -1416,21 +1418,19 @@ img {
   padding-left: 0;
 }
 
-.catalog-title {
+.catalog-title {     
   margin-bottom: 8px;
 }
 
-.catalog-title h1 { 
-  margin-left: 29px;
-  margin-top: 29px;
-  margin-bottom: 30px;
+.catalog-title h1 {   
+  margin: 25px 29px 30px 29px;
   
 }
 
 /*Filters*/
 
 .range-filter {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .range-controls {
@@ -1583,13 +1583,17 @@ img {
 }
 
 .filter-checkbox {
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   margin-top: 15px;
+}
+
+.filter-checkbox:last-child {
+  margin-bottom:5px;
 }
 
 .filter-radio {
   margin-bottom: 16px;
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .filter-radio label {
@@ -1766,6 +1770,7 @@ img {
 }
 
 .catalog-item {
+  position: relative;
   background-color: var(--text-white);
   width: 220px;
   min-height: 318px;
@@ -1779,11 +1784,19 @@ img {
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 }
 
+.catalog-item:hover .buttton-catalog-group {
+  opacity: 1;
+}
+
+.catalog-item:hover .catalog-item-image {
+  opacity: 0;
+}
+
 .catalog-item:nth-child(3n) {
   margin-right: 0;
 }
 
-.catalog-item a {
+.catalog-item a {  
   display: flex;
   flex-direction: column;  
   align-items: center;  
@@ -1794,14 +1807,15 @@ img {
   align-items: center;
   justify-content: center;
   width: 184px;
-  height: 164px;  
-  margin: 0;
+  height: 164px;    
+  margin-bottom: 9px;
   margin-top: 6px;
 }
 
 .catalog-item-image img {
   text-align: center;
   vertical-align: middle;
+  object-fit: contain;
 }
 
 .catalog-item-title {
@@ -1817,9 +1831,40 @@ img {
   color: var(--text-black);
 }
 
+.buttton-catalog-group {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 38px;
+  left: 41px;
+  opacity: 0;
+}
+
 .button-buy {
+  position: relative;
+  color: var(--text-white);
   background-color: var(--order-buy-background);
+  border: none;
   border-radius: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding: 10px 41px 10px 55px;
+  outline: none;
+  box-shadow: inset 0px -3px 0px #367315;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.button-buy::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  left: 30px;
+  position: absolute;     
+  background-image: url(../img/icon-cart.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
 }
 
 .button-buy:hover {
@@ -1835,6 +1880,11 @@ img {
   background-color: transparent;
   border: 3px solid var(--order-buy-background);
   border-radius: 2px;
+  text-transform: uppercase;
+  padding: 7px 31px;
+  font-size: 14px;
+  line-height: 18px;
+  outline: none;
 }
 
 .button-in-tab:hover {
@@ -1854,7 +1904,7 @@ img {
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
-  margin-bottom: 69px;
+  margin-bottom: 60px;
   margin-top: 28px;
 }
 
@@ -1903,7 +1953,7 @@ img {
 
 .about-drills { 
   padding-top: 64px;
-  padding-bottom: 68px;
+  padding-bottom: 57px;
   display: grid;
   grid-template-columns: 1fr;  
   width: 940px;
@@ -1911,4 +1961,48 @@ img {
   background-color: var(--background-main-footer); 
 }
 
+.modal-cart {
+  width: 620px;
+  height: 282px;
+  background-image: url(../img/icon-modal-cart.svg);
+  background-repeat: no-repeat;
+  background-position: 81px 55px;
+  top: 10px;
+}
 
+.modal-cart p {
+  margin: 0;
+  margin-top: 73px;
+  margin-left: 179px;    
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;    
+}
+
+.modal-cart-footer {
+  margin: 0;
+  margin-top: 67px;
+}
+
+.footer-modal-buttons {
+  display: inline-block;
+  margin: 37px 112px;  
+}
+
+.modal-cart-footer button {
+  min-height: 38px;
+  min-width: 192px;  
+}
+
+
+.continue-shopping {
+  background-color: var(--text-white);
+  color: var(--text-black);  
+  margin-left: 5px;
+  
+}
+
+.continue-shopping:hover,
+.continue-shopping:active {
+  background-color: var(--text-white);
+}
