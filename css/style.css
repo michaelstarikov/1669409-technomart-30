@@ -1980,8 +1980,7 @@ img {
   background-image: url(../img/icon-modal-cart.svg);
   background-repeat: no-repeat;
   background-position: 81px 55px;
-  top: 312px;
-  bottom: auto;
+  top: 10px;
 }
 
 .modal-cart p {
