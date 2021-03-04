@@ -85,3 +85,35 @@ window.addEventListener("keydown", function (evt) {
         }        
     }
 })
+
+
+/*Services*/
+
+let service = function () {
+    let Button = document.querySelectorAll('.service-button'),
+        Slide = document.querySelectorAll('.service-slide'),
+        tabName;
+
+        Button.forEach(item => {
+        item.addEventListener('click', selectTabNav)
+    });
+
+    function selectTabNav() {
+        Button.forEach(item => {
+            item.classList.remove('active-service');
+        });
+        this.classList.add('active-service');
+        tabName = this.getAttribute('data-tab-name');
+        selectTabContent(tabName);
+    }
+
+    function selectTabContent(tabName) {
+        Slide.forEach(item => {
+            item.classList.contains(tabName) ? item.classList.add('active-service') : item.classList.remove('active-service');
+        })
+    }
+
+};
+
+
+service();
