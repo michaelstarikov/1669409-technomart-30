@@ -302,7 +302,7 @@
           Вы можете забрать товар сами,<br>
           заехав в наш офис:
         </p>
-        <a href="">
+        <a class="map-image" href="">
           <img class="map" src="img/map.jpg" alt="Карта">
         </a>
         <a class="button lost" href="">ЗАБЛУДИЛИСЬ? НАПИШИТЕ НАМ!</a>
@@ -378,18 +378,18 @@
     </div>
   </footer>
 
-  <section class="modal modal-login active-modal">
+  <section class="modal modal-login">
     <h2 class="visually-hidden">Обратная связь</h2>    
     <form class="name-form" action="https://echo.htmlacademy.ru" method="post">
       <div class="modal-content">
         <div class="modal-username-wrapper">
           <p class="modal-field">        
             <label for="username">Ваше имя:</label>
-            <input class="modal-input-field" id="username" type="text" name="username" placeholder="Имя Фамилия">
+            <input class="modal-input-field user-field" id="username" type="text" name="username" placeholder="Имя Фамилия">
           </p>
           <p class="modal-field">          
             <label for="user-mail">Ваш e-mail:</label>
-            <input class="modal-input-field" id="user-mail" type="email" name="email" placeholder="email@example.com">
+            <input class="modal-input-field mail-field" id="user-mail" type="email" name="email" placeholder="email@example.com">
           </p>
         </div>
         <div class="modal-text">          
@@ -411,9 +411,11 @@
         width="943" height="449" 
         allowfullscreen title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
     </iframe>
-    <button class="modal-close" type="button" aria-label="Закрыть"></button>
+    <button class="modal-close map-close" type="button" aria-label="Закрыть"></button>
   </section>
   
+  <script src="js/script.js"></script>
+
 </body>
 
 </html>
