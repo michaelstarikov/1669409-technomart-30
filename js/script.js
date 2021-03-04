@@ -6,30 +6,60 @@ const closePopup = document.querySelector(".modal-close");
 const form = popupLogin.querySelector(".name-form");
 const username = popupLogin.querySelector(".user-field");
 const email = popupLogin.querySelector(".mail-field");
-const storage = localStorage.getItem("username");
+
+
+
+let isStorageSupport = true;
+let storage = "";
+
+try {
+    storage = localStorage.getItem("username");
+} catch (err) {
+    isStorageSupport = false;
+}
+
 
 buttonLost.addEventListener("click", function (evt) {
     evt.preventDefault ();
     popupLogin.classList.add("active-modal");
-    username.focus();    
+      
     if (storage) {
-        username.value = storage;        
+        username.value = storage;   
+        email.focus();     
+    } else {
+        username.focus();
     }
 });
 
 closePopup.addEventListener("click", function (evt) {
     evt.preventDefault ();
     popupLogin.classList.remove("active-modal");
+    popupLogin.classList.remove("modal-error"); 
 });
 
 form.addEventListener("submit", function (evt) {
     if (!username.value || !email.value) {
         evt.preventDefault ();
-        console.log("Введите имя пользователя и почту");        
+        popupLogin.classList.remove("modal-error"); 
+        popupLogin.offsetWidth = popupLogin.offsetWidth;   
+        popupLogin.classList.add("modal-error");   
     } else {
-        localStorage.setItem("username", username.value);
+        if (isStorageSupport) {
+            localStorage.setItem("username", username.value);
+        }
     }
 });
+
+window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+        if (popupLogin.classList.contains("active-modal")) {
+            evt.preventDefault();
+            popupLogin.classList.remove("active-modal");
+            popupLogin.classList.remove("modal-error"); 
+        }
+        
+    }
+})
 
 /*Popup map*/
 
@@ -46,3 +76,12 @@ closeMap.addEventListener("click", function (evt) {
     evt.preventDefault ();
     mapPopup.classList.remove("active-modal");
 });
+
+window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+        if (mapPopup.classList.contains("active-modal")) {
+            evt.preventDefault();
+            mapPopup.classList.remove("active-modal");            
+        }        
+    }
+})
