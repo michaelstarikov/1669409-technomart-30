@@ -117,3 +117,34 @@ let service = function () {
 
 
 service();
+
+let slider = function () {
+    let Dots = document.querySelectorAll('.slider-tab'),
+        SliderItem = document.querySelectorAll('.slider-item'),
+        slideName;
+
+        Dots.forEach(item => {
+        item.addEventListener('click', selectDotNav)
+    });
+
+    function selectDotNav() {
+        Dots.forEach(item => {
+            item.classList.remove('current');
+        });
+        this.classList.add('current');
+        slideName = this.getAttribute('data-tab-name');
+        selectSlideContent(slideName);
+    }
+
+    function selectSlideContent(slideName) {
+        SliderItem.forEach(item => {
+            item.classList.contains(slideName) ? item.classList.add('slide-current') : item.classList.remove('slide-current');
+        })
+    }
+
+};
+
+
+slider();
+
+
