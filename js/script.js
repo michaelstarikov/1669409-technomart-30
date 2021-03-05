@@ -118,10 +118,12 @@ let service = function () {
 
 service();
 
+
+
 let slider = function () {
     let Dots = document.querySelectorAll('.slider-tab'),
         SliderItem = document.querySelectorAll('.slider-item'),
-        slideName;
+        slideName;        
 
         Dots.forEach(item => {
         item.addEventListener('click', selectDotNav)
@@ -142,17 +144,23 @@ let slider = function () {
         })
     }
     
-    let currentSlide = 1; 
+    let currentSlide = 1;     
+    
     const buttonNext = document.querySelector('.button-forward');
+    
+   
     
         buttonNext.addEventListener('click', selectNextSlide);
     
-    function selectNextSlide(n) {
+    function selectNextSlide() {
         currentSlide++;            
-        selectSlideContent('tab-' + currentSlide); 
-    }    
- 
-    
+        selectSlideContent('tab-' + currentSlide);             
+
+        if (currentSlide = SliderItem.length) {
+            buttonNext.setAttribute('disabled',true);
+            buttonBack.removeAttribute('disabled',true);            
+        }
+    }        
     
     const buttonBack = document.querySelector('.button-back');
     
@@ -160,9 +168,17 @@ let slider = function () {
     
     function selectPreviousSlide () {
         currentSlide--;
-        selectSlideContent('tab-' + currentSlide);        
+        selectSlideContent('tab-' + currentSlide);
+        
+        if (currentSlide = SliderItem.length) {
+            
+            buttonNext.removeAttribute('disabled',true);
+            
+        }
     }  
+    
 };
 
 slider();
+
 
