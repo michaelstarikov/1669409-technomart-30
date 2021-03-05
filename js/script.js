@@ -151,33 +151,36 @@ let slider = function () {
         buttonNext.addEventListener('click', selectNextSlide);
     
     function selectNextSlide() {
-        currentSlide++;            
-        selectSlideContent('tab-' + currentSlide); 
-                    
+        const tabFirst = document.getElementById("tab1");
+        tabFirst.classList.remove("current");
+        const tabSecond = document.getElementById("tab2");
+        tabSecond.classList.add("current");
+    currentSlide++;
+    selectSlideContent("tab-" + currentSlide);
 
-        if (currentSlide = SliderItem.length) {
-            buttonNext.setAttribute('disabled',true);
-            buttonBack.removeAttribute('disabled',true);            
-        }
-    }        
-    
-    const buttonBack = document.querySelector('.button-back');
-    
-        buttonBack.addEventListener('click', selectPreviousSlide);
-    
-    function selectPreviousSlide () {
-        currentSlide--;
-        selectSlideContent('tab-' + currentSlide);
-        
-        
-        if (currentSlide = SliderItem.length-1) {
-            buttonNext.removeAttribute('disabled',true);  
-            buttonBack.setAttribute('disabled',true);            
-        }
-    }  
-    
+    if ((currentSlide = SliderItem.length)) {
+      buttonNext.setAttribute("disabled", true);
+      buttonBack.removeAttribute("disabled", true);
+    }
+  }
+
+  const buttonBack = document.querySelector(".button-back");
+
+  buttonBack.addEventListener("click", selectPreviousSlide);
+
+  function selectPreviousSlide() {
+    const tabSecond = document.getElementById("tab2");
+    tabSecond.classList.remove("current");
+    const tabFirst = document.getElementById("tab1");
+    tabFirst.classList.add("current");
+    currentSlide--;
+    selectSlideContent("tab-" + currentSlide);
+
+    if ((currentSlide = SliderItem.length - 1)) {
+      buttonNext.removeAttribute("disabled", true);
+      buttonBack.setAttribute("disabled", true);
+    }
+  }
 };
 
 slider();
-
-
