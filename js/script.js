@@ -141,10 +141,28 @@ let slider = function () {
             item.classList.contains(slideName) ? item.classList.add('slide-current') : item.classList.remove('slide-current');
         })
     }
-
+    
+    let currentSlide = 1; 
+    const buttonNext = document.querySelector('.button-forward');
+    
+        buttonNext.addEventListener('click', selectNextSlide);
+    
+    function selectNextSlide(n) {
+        currentSlide++;            
+        selectSlideContent('tab-' + currentSlide); 
+    }    
+ 
+    
+    
+    const buttonBack = document.querySelector('.button-back');
+    
+        buttonBack.addEventListener('click', selectPreviousSlide);
+    
+    function selectPreviousSlide () {
+        currentSlide--;
+        selectSlideContent('tab-' + currentSlide);        
+    }  
 };
 
-
 slider();
-
 
