@@ -146,15 +146,14 @@ let slider = function () {
     
     let currentSlide = 1;     
     
-    const buttonNext = document.querySelector('.button-forward');
-    
-   
+    const buttonNext = document.querySelector('.button-forward');      
     
         buttonNext.addEventListener('click', selectNextSlide);
     
     function selectNextSlide() {
         currentSlide++;            
-        selectSlideContent('tab-' + currentSlide);             
+        selectSlideContent('tab-' + currentSlide); 
+                    
 
         if (currentSlide = SliderItem.length) {
             buttonNext.setAttribute('disabled',true);
@@ -170,10 +169,10 @@ let slider = function () {
         currentSlide--;
         selectSlideContent('tab-' + currentSlide);
         
-        if (currentSlide = SliderItem.length) {
-            
-            buttonNext.removeAttribute('disabled',true);
-            
+        
+        if (currentSlide = SliderItem.length-1) {
+            buttonNext.removeAttribute('disabled',true);  
+            buttonBack.setAttribute('disabled',true);            
         }
     }  
     
