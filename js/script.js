@@ -19,8 +19,8 @@ try {
 }
 
 
-buttonLost.addEventListener("click", function (evt) {
-    evt.preventDefault ();
+buttonLost.addEventListener("click", function(evt) {
+    evt.preventDefault();
     popupLogin.classList.add("active-modal");
       
     if (storage) {
@@ -31,15 +31,15 @@ buttonLost.addEventListener("click", function (evt) {
     }
 });
 
-closePopup.addEventListener("click", function (evt) {
-    evt.preventDefault ();
+closePopup.addEventListener("click", function(evt) {
+    evt.preventDefault();
     popupLogin.classList.remove("active-modal");
     popupLogin.classList.remove("modal-error"); 
 });
 
-form.addEventListener("submit", function (evt) {
+form.addEventListener("submit", function(evt) {
     if (!username.value || !email.value) {
-        evt.preventDefault ();
+        evt.preventDefault();
         popupLogin.classList.remove("modal-error"); 
         popupLogin.offsetWidth = popupLogin.offsetWidth;   
         popupLogin.classList.add("modal-error");   
@@ -50,7 +50,7 @@ form.addEventListener("submit", function (evt) {
     }
 });
 
-window.addEventListener("keydown", function (evt) {
+window.addEventListener("keydown", function(evt) {
     if (evt.keyCode === 27) {
         if (popupLogin.classList.contains("active-modal")) {
             evt.preventDefault();
@@ -67,17 +67,17 @@ const mapImage = document.querySelector(".map-image");
 const mapPopup = document.querySelector(".modal-map");
 const closeMap = document.querySelector(".map-close");
 
-mapImage.addEventListener("click", function (evt) {
-    evt.preventDefault ();
+mapImage.addEventListener("click", function(evt) {
+    evt.preventDefault();
     mapPopup.classList.add("active-modal");
 });
 
-closeMap.addEventListener("click", function (evt) {
+closeMap.addEventListener("click", function(evt) {
     evt.preventDefault ();
     mapPopup.classList.remove("active-modal");
 });
 
-window.addEventListener("keydown", function (evt) {
+window.addEventListener("keydown", function(evt) {
     if (evt.keyCode === 27) {
         if (mapPopup.classList.contains("active-modal")) {
             evt.preventDefault();
@@ -89,7 +89,7 @@ window.addEventListener("keydown", function (evt) {
 
 /*Services*/
 
-let service = function () {
+let service = function() {
     let Button = document.querySelectorAll('.service-button'),
         Slide = document.querySelectorAll('.service-slide'),
         tabName;
@@ -118,69 +118,34 @@ let service = function () {
 
 service();
 
+const promoSlides = document.querySelectorAll('.slider-item');
+const buttonBack = document.querySelector('.button-back');
+const buttonForward = document.querySelector('.button-forward');
+const sliderTabs = document.querySelectorAll('.slider-tab');
 
 
-let slider = function () {
-    let Dots = document.querySelectorAll('.slider-tab'),
-        SliderItem = document.querySelectorAll('.slider-item'),
-        slideName;        
+  let slideIndex = 0;
 
-        Dots.forEach(item => {
-        item.addEventListener('click', selectDotNav)
-    });
+  function switchToNextSlide(id) {
+    document.querySelector('.slide-current').classList.remove('slide-current');
+    document.querySelector('.current').classList.remove('current');
 
-    function selectDotNav() {
-        Dots.forEach(item => {
-            item.classList.remove('current');
-        });
-        this.classList.add('current');
-        slideName = this.getAttribute('data-tab-name');
-        selectSlideContent(slideName);
-    }
+    slideIndex = id >= 0 ? id % promoSlides.length : promoSlides.length - 1;
 
-    function selectSlideContent(slideName) {
-        SliderItem.forEach(item => {
-            item.classList.contains(slideName) ? item.classList.add('slide-current') : item.classList.remove('slide-current');
-        })
-    }
-    
-    let currentSlide = 1;     
-    
-    const buttonNext = document.querySelector('.button-forward');      
-    
-        buttonNext.addEventListener('click', selectNextSlide);
-    
-    function selectNextSlide() {
-        const tabFirst = document.getElementById("tab1");
-        tabFirst.classList.remove("current");
-        const tabSecond = document.getElementById("tab2");
-        tabSecond.classList.add("current");
-    currentSlide++;
-    selectSlideContent("tab-" + currentSlide);
-
-    if ((currentSlide = SliderItem.length)) {
-      buttonNext.setAttribute("disabled", true);
-      buttonBack.removeAttribute("disabled", true);
-    }
+    promoSlides[slideIndex].classList.add('slide-current');
+    sliderTabs[slideIndex].classList.add('current');
   }
 
-  const buttonBack = document.querySelector(".button-back");
-
-  buttonBack.addEventListener("click", selectPreviousSlide);
-
-  function selectPreviousSlide() {
-    const tabSecond = document.getElementById("tab2");
-    tabSecond.classList.remove("current");
-    const tabFirst = document.getElementById("tab1");
-    tabFirst.classList.add("current");
-    currentSlide--;
-    selectSlideContent("tab-" + currentSlide);
-
-    if ((currentSlide = SliderItem.length - 1)) {
-      buttonNext.removeAttribute("disabled", true);
-      buttonBack.setAttribute("disabled", true);
-    }
+  for (var i = 0; i < sliderTabs.length; i++) {
+    sliderTabs[i].addEventListener('click', function (evt) {
+      switchToNextSlide(evt.target.dataset.slide);
+    })
   }
-};
+  buttonForward.addEventListener('click', function () {
+    switchToNextSlide(slideIndex + 1);
+  });
+  buttonBack.addEventListener('click', function () {
+    switchToNextSlide(slideIndex - 1)
+  });
 
-slider();
+
