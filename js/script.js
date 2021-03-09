@@ -3,8 +3,7 @@ const buttonBuy = document.querySelectorAll(".button-buy");
 const popupCart = document.querySelector(".modal-cart");
 const popupCartClose = document.querySelector(".modal-cart-close");
 
-
-for (var i = 0; i < buttonBuy.length; i++) {
+for (let i = 0; i < buttonBuy.length; i++) {
     buttonBuy[i].addEventListener('click', function(){      
       popupCart.classList.add('active-modal');
     });
@@ -20,22 +19,17 @@ window.addEventListener("keydown", function(evt) {
         if (popupCart.classList.contains("active-modal")) {
             evt.preventDefault();
             popupCart.classList.remove("active-modal");            
-        }
-        
+        }        
     }
 });
 
 /*Popup contact*/
-
 const buttonLost = document.querySelector(".lost");
 const popupLogin = document.querySelector(".modal-login");
 const closePopup = document.querySelector(".modal-close");
 const form = document.querySelector(".name-form");
 const username = document.querySelector(".user-field");
-const email = document.querySelector(".mail-field");
-
-
-    
+const email = document.querySelector(".mail-field");  
 
 let isStorageSupport = true;
 let storage = "";
@@ -45,7 +39,6 @@ try {
 } catch (err) {
     isStorageSupport = false;
 };
-
 
 buttonLost.addEventListener("click", function(evt) {
     evt.preventDefault();
@@ -84,13 +77,11 @@ window.addEventListener("keydown", function(evt) {
             evt.preventDefault();
             popupLogin.classList.remove("active-modal");
             popupLogin.classList.remove("modal-error"); 
-        }
-        
+        }        
     }
 });
 
 /*Popup map*/
-
 const mapImage = document.querySelector(".map-image");
 const mapPopup = document.querySelector(".modal-map");
 const closeMap = document.querySelector(".map-close");
@@ -115,7 +106,6 @@ window.addEventListener("keydown", function(evt) {
 });
 
 /*Services*/
-
 let service = function() {
     let Button = document.querySelectorAll('.service-button'),
         Slide = document.querySelectorAll('.service-slide'),
@@ -139,17 +129,13 @@ let service = function() {
             item.classList.contains(tabName) ? item.classList.add('active-service') : item.classList.remove('active-service');
         })
     }
-
 };
-
-
 service();
 
 const promoSlides = document.querySelectorAll('.slider-item');
 const buttonBack = document.querySelector('.button-back');
 const buttonForward = document.querySelector('.button-forward');
 const sliderTabs = document.querySelectorAll('.slider-tab');
-
 
   let slideIndex = 0;
 
@@ -163,7 +149,7 @@ const sliderTabs = document.querySelectorAll('.slider-tab');
     sliderTabs[slideIndex].classList.add('current');
   }
 
-  for (var i = 0; i < sliderTabs.length; i++) {
+  for (let i = 0; i < sliderTabs.length; i++) {
     sliderTabs[i].addEventListener('click', function (evt) {
       switchToNextSlide(evt.target.dataset.slide);
     })
@@ -174,6 +160,3 @@ const sliderTabs = document.querySelectorAll('.slider-tab');
   buttonBack.addEventListener('click', function () {
     switchToNextSlide(slideIndex - 1)
   });
-
-
-
