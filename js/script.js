@@ -1,13 +1,41 @@
+/*Popup cart*/
+const buttonBuy = document.querySelectorAll(".button-buy");
+const popupCart = document.querySelector(".modal-cart");
+const popupCartClose = document.querySelector(".modal-cart-close");
+
+
+for (var i = 0; i < buttonBuy.length; i++) {
+    buttonBuy[i].addEventListener('click', function(){      
+      popupCart.classList.add('active-modal');
+    });
+}
+
+popupCartClose.addEventListener("click", function(evt) {
+    evt.preventDefault();
+    popupCart.classList.remove("active-modal");    
+});
+
+window.addEventListener("keydown", function(evt) {
+    if (evt.keyCode === 27) {
+        if (popupCart.classList.contains("active-modal")) {
+            evt.preventDefault();
+            popupCart.classList.remove("active-modal");            
+        }
+        
+    }
+});
+
 /*Popup contact*/
 
 const buttonLost = document.querySelector(".lost");
 const popupLogin = document.querySelector(".modal-login");
 const closePopup = document.querySelector(".modal-close");
-const form = popupLogin.querySelector(".name-form");
-const username = popupLogin.querySelector(".user-field");
-const email = popupLogin.querySelector(".mail-field");
+const form = document.querySelector(".name-form");
+const username = document.querySelector(".user-field");
+const email = document.querySelector(".mail-field");
 
 
+    
 
 let isStorageSupport = true;
 let storage = "";
@@ -16,7 +44,7 @@ try {
     storage = localStorage.getItem("username");
 } catch (err) {
     isStorageSupport = false;
-}
+};
 
 
 buttonLost.addEventListener("click", function(evt) {
@@ -59,7 +87,7 @@ window.addEventListener("keydown", function(evt) {
         }
         
     }
-})
+});
 
 /*Popup map*/
 
@@ -84,8 +112,7 @@ window.addEventListener("keydown", function(evt) {
             mapPopup.classList.remove("active-modal");            
         }        
     }
-})
-
+});
 
 /*Services*/
 
@@ -147,5 +174,6 @@ const sliderTabs = document.querySelectorAll('.slider-tab');
   buttonBack.addEventListener('click', function () {
     switchToNextSlide(slideIndex - 1)
   });
+
 
 
