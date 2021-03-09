@@ -1,10 +1,10 @@
 /*Popup cart*/
-const buttonBuy = document.querySelectorAll(".button-buy");
+const buttonsBuy = document.querySelectorAll(".button-buy");
 const popupCart = document.querySelector(".modal-cart");
 const popupCartClose = document.querySelector(".modal-cart-close");
 
-for (let i = 0; i < buttonBuy.length; i++) {
-    buttonBuy[i].addEventListener('click', function(){      
+for (let i = 0; i < buttonsBuy.length; i++) {
+    buttonsBuy[i].addEventListener('click', function(){      
       popupCart.classList.add('active-modal');
     });
 }
