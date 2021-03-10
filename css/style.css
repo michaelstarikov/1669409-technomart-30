@@ -90,6 +90,7 @@ img {
 
 .button {  
   display: inline-block;
+  vertical-align: middle;
   text-align: center;
   font-size: 14px;
   line-height: 18px;   
@@ -235,7 +236,7 @@ img {
 }
 
 .button-modal {
-  margin: 25px 80px;
+  margin: 37px 80px;
   width: 460px;
   height: 38px;
 }
@@ -607,6 +608,7 @@ img {
 
 .promotion-item a {  
   display: inline-block; 
+  vertical-align: middle;
   position: relative; 
   width: 135px;   
   font-size: 14px;
@@ -742,6 +744,7 @@ img {
 
 .slider-main-text {
   display: inline-block;
+  vertical-align: middle;
   width: 596px;
   height: 104px;
   padding-left: 24px;
@@ -919,6 +922,7 @@ img {
 
 .price-new {    
   display: inline-block;
+  vertical-align: middle;
   width: 141px;
   height: 38px;
   text-align: center;
@@ -955,7 +959,7 @@ img {
 .popular-brands-list {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 50px;
+  margin-bottom: 45px;
 }
 
 .popular-brands-item {   
@@ -1006,16 +1010,16 @@ img {
   display: grid;
   position: relative;
   width: 940px;
-  height: 522px;
+  min-height: 522px;
   margin: 0 auto;
   grid-template-columns: 1fr 1fr;
   background-color: var(--background-main-footer); 
 }
 
-.services .services-info-text {  
-  position: absolute;
+.services .services-info-text {    
   margin-top: 65px;
   grid-column: 1 / -1;  
+  margin-bottom: 25px;
 }
 
 .information-title {  
@@ -1036,8 +1040,8 @@ img {
 }
 
 .services-list {
-  position: absolute;  
-  margin-top: 240px;
+  position: relative;
+  margin-top: 30px; 
 }
 
 .services-list::after{
@@ -1080,17 +1084,13 @@ img {
   box-shadow: none;   
 }
 
-.service-description {
-  position: absolute;
-  top: 205px;
-  left: 320px;  
-}
 
 .service-slide {
   display: none;  
-  height: 276px;
-  width: 630px;
+  min-height: 283px;
+  width: 625px;
   background-repeat: no-repeat;
+  margin-left: 80px; 
 }
 
 .service-slide.active-service {
@@ -1352,7 +1352,7 @@ img {
 .profile-section {
   position: relative;
   display: block;  
-  margin-top: 45px;  
+  margin-top: 45px;    
 }
 
 .profile {
@@ -2036,6 +2036,7 @@ img {
 
 .footer-modal-buttons {
   display: inline-block;
+  vertical-align: middle;
   margin: 37px 112px;  
 }
 
